@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notificación de Aviso</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-size: cover;
+    }
+
+    #notification {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      background-size: contain;
+    }
+
+    #notification-text {
+      font-size: 27px;
+      color: #00000;
+      font-weight: bold;
+      margin-bottom: 20px;
+      background-color: rgba(240, 240, 240, 0.7);
+      padding: 1px; /* Espaciado interno para el fondo del texto */
+      border-radius: 3px;
+    }
+
+    #accept-button {
+      padding: 15px 30px;
+      font-size: 18px;
+      cursor: pointer;
+      background-color: red;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="notification">
+    <p id="notification-text"></p>
+    <button id="accept-button" onclick="redireccionar()">JOIN LIVE STREAM</button>
+  </div>
+
+  <script>
+    function redireccionar() {
+      // Coloca la URL a la que deseas redirigir al usuario
+      window.location.href = "https://lovelinkland.life/?u=gyqpd06&o=5ppk29b";
+    }
+
+    // Arreglos de imágenes para fondo y notificación
+    var backgroundImages = ['fondo2.png', 'fondo2.png', 'fondo2.png', 'fondo2.png'];
+    var notificationImages = ['notificacion1.jpg', 'notificacion2.jpg', 'notificacion3.jpg', 'notificacion4.jpg', 'notificacion5.jpg', 'notificacion6.jpg', 'notificacion7.jpg', 'notificacion8.jpg', 'notificacion9.jpg', 'notificacion10.jpg'];
+
+    // Selecciona una imagen aleatoria para el fondo
+    var randomBackgroundImage = backgroundImages[Math.floor(Math.random() * backgroundImages.length)];
+    document.body.style.backgroundImage = `url('${randomBackgroundImage}')`;
+
+    // Selecciona una imagen aleatoria para la notificación
+    var randomNotificationImage = notificationImages[Math.floor(Math.random() * notificationImages.length)];
+    document.getElementById("notification").style.backgroundImage = `url('${randomNotificationImage}')`;
+
+    // Detecta el idioma del navegador
+    var language = navigator.language || navigator.userLanguage;
+
+    // Traduce el texto según el idioma
+    var notificationText = document.getElementById("notification-text");
+    switch (language.toLowerCase()) {
+      case "de":
+        notificationText.innerText = "Direktsändningen fortsätter! Anslut för att se spännande innehåll.";
+        break;
+      case "fr":
+        notificationText.innerText = "La diffusion en direct continue ! Rejoignez-nous pour regarder du contenu passionnant.";
+        break;
+      case "it":
+        notificationText.innerText = "La trasmissione live continua! Unisciti per guardare contenuti emozionanti.";
+        break;
+      case "en":
+        notificationText.innerText = "The live broadcast continues! Join to watch exciting content.";
+        break;
+      default:
+        // Si no coincide con ninguno de los idiomas anteriores, se utiliza español como predeterminado.
+        notificationText.innerText = "The live broadcast continues! Join to watch exciting content.";
+        break;
+    }
+  </script>
+
+  <img src='//whos.amung.us/pingjs/?k=&amp;t=movil&amp;x=https://www.facebook.com/' style='display:none'/>
+  
+</body>
+</html>
